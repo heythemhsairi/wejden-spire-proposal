@@ -7,6 +7,7 @@ import AudienceSection from './sections/AudienceSection'
 import IdentitySection from './sections/IdentitySection'
 import TypographySection from './sections/TypographySection'
 import LogoSection from './sections/LogoSection'
+import IconographySection from './sections/IconographySection'
 import ClearSpaceSection from './sections/ClearSpaceSection'
 import SymbolSection from './sections/SymbolSection'
 import MockupsSection from './sections/MockupsSection'
@@ -25,6 +26,7 @@ export default function App() {
         <IdentitySection />
         <TypographySection />
         <LogoSection />
+        <IconographySection />
         <ClearSpaceSection />
         <SymbolSection />
         <MockupsSection />

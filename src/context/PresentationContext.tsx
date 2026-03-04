@@ -18,6 +18,7 @@ const SECTIONS = [
   { id: 'identity', label: 'Identity' },
   { id: 'typography', label: 'Typography' },
   { id: 'logo', label: 'Logo' },
+  { id: 'iconography', label: 'Iconography' },
   { id: 'clearspace', label: 'Clear Space' },
   { id: 'symbol', label: 'Symbol' },
   { id: 'context', label: 'Context' },

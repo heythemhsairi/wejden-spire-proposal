@@ -21,6 +21,16 @@ export default function FooterSection() {
             Confidential
           </span>
         </Reveal>
+        <Reveal delay={0.2}>
+          <div className="mt-12 flex items-center justify-center gap-3">
+            <span className="text-sm text-white/40">Made it by</span>
+            <img
+              src="/assets/areen-cubs-logo.svg"
+              alt="Areen Cubs"
+              className="h-14 w-auto brightness-0 invert opacity-50"
+            />
+          </div>
+        </Reveal>
       </div>
     </section>
   )

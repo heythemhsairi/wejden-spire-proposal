@@ -56,20 +56,6 @@ export default function LogoSection() {
             </StaggerItem>
           ))}
         </Stagger>
-        <Reveal delay={0.4}>
-          <div className="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-border">
-            <div className="flex items-center justify-center p-8">
-              <img
-                src="/assets/visual-symbol.svg"
-                alt="Wejden Spire visual symbol construction"
-                className="w-full max-w-sm"
-              />
-            </div>
-            <div className="border-t border-border px-4 py-2.5">
-              <p className="text-xs font-medium text-text">Visual Symbol</p>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   )
