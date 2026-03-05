@@ -23,17 +23,17 @@ export default function CoverSection() {
         {/* Main headline */}
         <Reveal delay={0.15}>
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-text md:text-5xl lg:text-6xl">
-            Elevate Wellbeing,
+            Scale Smarter,
             <br />
-            <span className="text-primary">Empower Growth</span>
+            <span className="text-primary">Grow Stronger</span>
           </h1>
         </Reveal>
 
         {/* Description */}
         <Reveal delay={0.2}>
           <p className="mx-auto mb-12 max-w-lg text-base font-light leading-relaxed text-text-muted md:text-lg">
-            A calm, trusted system for enterprise wellbeing &mdash;
-            designed to inspire confidence at every touchpoint.
+            A strategic growth platform built for enterprises &mdash;
+            turning data into decisions that drive measurable results.
           </p>
         </Reveal>
 

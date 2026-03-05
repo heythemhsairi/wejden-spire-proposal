@@ -2,15 +2,15 @@ import Reveal from '../components/motion/Reveal'
 import { Stagger, StaggerItem } from '../components/motion/Stagger'
 
 const colors = [
-  { name: 'Primary Green', hex: '#2FBF71', usage: 'Primary actions, success states, brand accent' },
-  { name: 'Signal Blue', hex: '#2F6BFF', usage: 'Links, data visualization, secondary accent' },
-  { name: 'Accent Purple', hex: '#7B61FF', usage: 'Highlights, premium features, tertiary accent' },
+  { name: 'Primary Green', hex: '#229346', usage: 'Primary actions, success states, brand accent' },
+  { name: 'Secondary Blue', hex: '#2F6FE4', usage: 'Links, data visualization, secondary accent' },
+  { name: 'Accent Purple', hex: '#7A4DFF', usage: 'Highlights, premium features, tertiary accent' },
 ]
 
 const neutrals = [
-  { name: 'Background', hex: '#F7F9FC' },
-  { name: 'Text', hex: '#1A1D2E' },
-  { name: 'Muted', hex: '#6B7280' },
+  { name: 'Background', hex: '#F5F7FB' },
+  { name: 'Dark Text', hex: '#0F172A' },
+  { name: 'Secondary Text', hex: '#64748B' },
   { name: 'Border', hex: '#E2E8F0' },
 ]
 

@@ -19,7 +19,7 @@ export default function EssenceSection() {
             <div className="flex items-start gap-4">
               <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
               <p className="text-lg leading-relaxed text-text/80 md:text-xl">
-                Listen first. Every voice matters, every signal counts.
+                Growth-first mindset. Every metric matters, every opportunity counts.
               </p>
             </div>
           </Reveal>
@@ -27,7 +27,7 @@ export default function EssenceSection() {
             <div className="flex items-start gap-4">
               <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-blue" />
               <p className="text-lg leading-relaxed text-text/80 md:text-xl">
-                Privacy-first by design. Trust is non-negotiable.
+                Enterprise-grade reliability. Built for scale, designed for trust.
               </p>
             </div>
           </Reveal>
@@ -35,7 +35,7 @@ export default function EssenceSection() {
             <div className="flex items-start gap-4">
               <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-purple" />
               <p className="text-lg leading-relaxed text-text/80 md:text-xl">
-                Signals &rarr; insights &rarr; action. Data that moves the needle.
+                Data &rarr; strategy &rarr; results. Intelligence that drives business forward.
               </p>
             </div>
           </Reveal>

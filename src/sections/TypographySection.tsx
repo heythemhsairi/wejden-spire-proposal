@@ -21,7 +21,7 @@ const arabicHierarchy = [
   { tag: 'Body', text: '\u0646\u0638\u0627\u0645 \u0631\u0641\u0627\u0647\u064A\u0629 \u0627\u0644\u0645\u0624\u0633\u0633\u0627\u062A \u0627\u0644\u0645\u0648\u062B\u0648\u0642', size: 'text-base', weight: 'font-normal' },
 ]
 
-const arabicFont = "'IBM Plex Sans Arabic', sans-serif"
+const arabicFont = "'Meral Sans', sans-serif"
 
 export default function TypographySection() {
   return (
@@ -44,7 +44,7 @@ export default function TypographySection() {
           <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-text-muted">
             Primary Typeface
           </p>
-          <p className="mb-5 text-3xl font-bold text-text">Inter</p>
+          <p className="mb-5 text-3xl font-bold text-text">Manrope</p>
           <div className="mb-12 grid grid-cols-5 gap-3">
             {weights.map((w) => (
               <div
@@ -88,7 +88,7 @@ export default function TypographySection() {
               <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-muted">
                 Arabic Typeface
               </p>
-              <p className="text-xs text-text/40">IBM Plex Sans Arabic</p>
+              <p className="text-xs text-text/40">Meral Sans</p>
             </div>
             <div className="space-y-2" dir="rtl" lang="ar">
               {arabicHierarchy.map((h) => (

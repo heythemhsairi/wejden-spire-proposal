@@ -1,19 +1,26 @@
 @import "tailwindcss";
 
+/* ── Meral Sans (self-hosted) ── */
+@font-face { font-family: 'Meral Sans'; src: url('/fonts/MeralSans-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Meral Sans'; src: url('/fonts/MeralSans-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Meral Sans'; src: url('/fonts/MeralSans-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Meral Sans'; src: url('/fonts/MeralSans-SemiBold.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Meral Sans'; src: url('/fonts/MeralSans-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+
 @theme {
-  --color-primary: #2FBF71;
-  --color-blue: #2F6BFF;
-  --color-purple: #7B61FF;
-  --color-bg: #F7F9FC;
-  --color-neutral: #E8ECF3;
-  --color-text: #1A1D2E;
-  --color-primary-light: #E8F8F0;
-  --color-blue-light: #EBF0FF;
-  --color-purple-light: #F0ECFF;
-  --color-text-muted: #6B7280;
+  --color-primary: #229346;
+  --color-blue: #2F6FE4;
+  --color-purple: #7A4DFF;
+  --color-bg: #F5F7FB;
+  --color-neutral: #E2E8F0;
+  --color-text: #0F172A;
+  --color-primary-light: #E6F4EC;
+  --color-blue-light: #E9F0FF;
+  --color-purple-light: #EEEBFF;
+  --color-text-muted: #64748B;
   --color-border: #E2E8F0;
 
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Manrope', sans-serif;
 
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
@@ -25,7 +32,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03);
   --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.08), 0 10px 10px -5px rgba(0,0,0,0.02);
-  --shadow-glow: 0 0 40px rgba(47,191,113,0.15);
+  --shadow-glow: 0 0 40px rgba(34,147,70,0.15);
 }
 
 html {
@@ -41,7 +48,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(47, 191, 113, 0.15);
+  background-color: rgba(34, 147, 70, 0.15);
   color: var(--color-text);
 }
 

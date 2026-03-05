@@ -1,29 +1,29 @@
 /** Wejden Spire — Design Tokens */
 
 export const colors = {
-  primary:   '#2FBF71', // Primary Green
-  blue:      '#2F6BFF', // Secondary Blue
-  purple:    '#7B61FF', // Accent Purple
-  bg:        '#F7F9FC', // Background
-  neutral:   '#E8ECF3', // Neutral
-  text:      '#1A1D2E', // Text / Dark
+  primary:   '#229346', // Primary Green
+  blue:      '#2F6FE4', // Secondary Blue
+  purple:    '#7A4DFF', // Accent Purple
+  bg:        '#F5F7FB', // Background
+  neutral:   '#E2E8F0', // Neutral
+  text:      '#0F172A', // Text / Dark
   white:     '#FFFFFF',
   // Derived
-  primaryLight: '#E8F8F0',
-  blueLight:    '#EBF0FF',
-  purpleLight:  '#F0ECFF',
-  textMuted:    '#6B7280',
+  primaryLight: '#E6F4EC',
+  blueLight:    '#E9F0FF',
+  purpleLight:  '#EEEBFF',
+  textMuted:    '#64748B',
   border:       '#E2E8F0',
 } as const
 
 export const gradients = {
-  greenBlue:  'linear-gradient(135deg, #2FBF71 0%, #2F6BFF 100%)',
-  greenPurple: 'linear-gradient(135deg, #2FBF71 0%, #7B61FF 100%)',
-  subtle:     'linear-gradient(180deg, #F7F9FC 0%, #FFFFFF 100%)',
+  greenBlue:  'linear-gradient(135deg, #229346 0%, #2F6FE4 100%)',
+  greenPurple: 'linear-gradient(135deg, #229346 0%, #7A4DFF 100%)',
+  subtle:     'linear-gradient(180deg, #F5F7FB 0%, #FFFFFF 100%)',
 } as const
 
 export const typography = {
-  fontEn: "'Inter', sans-serif",
+  fontEn: "'Manrope', sans-serif",
   weights: { light: 300, regular: 400, medium: 500, semi: 600, bold: 700, extra: 800 },
   scale: {
     xs:   '0.75rem',   // 12px
@@ -66,7 +66,7 @@ export const shadows = {
   md:   '0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04)',
   lg:   '0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03)',
   xl:   '0 20px 25px -5px rgba(0,0,0,0.08), 0 10px 10px -5px rgba(0,0,0,0.02)',
-  glow: '0 0 40px rgba(47,191,113,0.15)',
+  glow: '0 0 40px rgba(34,147,70,0.15)',
 } as const
 
 export const motion = {

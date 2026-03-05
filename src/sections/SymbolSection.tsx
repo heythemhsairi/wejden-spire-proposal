@@ -1,9 +1,9 @@
 import Reveal from '../components/motion/Reveal'
 
 const meanings = [
-  { label: 'The Circle', desc: 'Safe space, protection, community.', color: 'bg-primary' },
-  { label: 'The Wave', desc: 'Emotional signal, natural rhythm.', color: 'bg-blue' },
-  { label: 'The Peak', desc: 'Elevation, growth, aspiration.', color: 'bg-purple' },
+  { label: 'The Spire', desc: 'Three ascending chevrons represent upward momentum — ambition, growth, and reaching new market heights.', color: 'bg-primary' },
+  { label: 'The Foundation', desc: 'The wide base anchors the mark with stability and trust — a solid platform for enterprise-scale operations.', color: 'bg-blue' },
+  { label: 'The Path', desc: 'Converging lines form a clear direction — guiding businesses from strategy to measurable outcomes.', color: 'bg-purple' },
 ]
 
 export default function SymbolSection() {
@@ -22,11 +22,11 @@ export default function SymbolSection() {
         </Reveal>
         <div className="grid items-center gap-12 md:grid-cols-2">
           <Reveal delay={0.15}>
-            <div className="flex items-center justify-center rounded-2xl bg-white p-8 ring-1 ring-border sm:p-12">
+            <div className="flex items-center justify-center rounded-2xl bg-white p-12 ring-1 ring-border sm:p-16">
               <img
-                src="/assets/visual-symbol.svg"
-                alt="Wejden Spire symbol construction"
-                className="w-full max-w-xs"
+                src="/assets/wejden-spire-icon.svg"
+                alt="Wejden Spire logo icon — three ascending chevrons"
+                className="w-full max-w-[140px]"
               />
             </div>
           </Reveal>

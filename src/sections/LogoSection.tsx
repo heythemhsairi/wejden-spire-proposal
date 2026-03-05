@@ -13,9 +13,9 @@ const lockups = [
     alt: 'Wejden Spire \u2014 English logo',
   },
   {
-    label: 'Horizontal',
-    src: '/assets/wejden-spire-logo-horizontal.svg',
-    alt: 'Wejden Spire \u2014 horizontal logo',
+    label: 'Vertical',
+    src: '/assets/wejden-spire-logo-vertical.svg',
+    alt: 'Wejden Spire \u2014 vertical logo',
   },
   {
     label: 'Icon',

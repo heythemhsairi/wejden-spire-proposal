@@ -4,18 +4,18 @@ import { Stagger, StaggerItem } from '../components/motion/Stagger'
 
 const pillars = [
   {
-    title: 'Listen',
-    description: 'Anonymous, judgment-free expression for every employee.',
+    title: 'Analyze',
+    description: 'Deep market intelligence and performance analytics for enterprise decision-makers.',
     color: 'bg-primary',
   },
   {
-    title: 'Understand',
-    description: 'AI-powered analysis that surfaces weak signals early.',
+    title: 'Optimize',
+    description: 'AI-powered insights that identify growth opportunities and eliminate inefficiencies.',
     color: 'bg-blue',
   },
   {
-    title: 'Act',
-    description: 'Clear, actionable recommendations for leadership.',
+    title: 'Scale',
+    description: 'Strategic frameworks and tools that accelerate sustainable business growth.',
     color: 'bg-purple',
   },
 ]
@@ -31,7 +31,7 @@ export default function PositioningSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="mb-16 max-w-3xl text-3xl font-bold tracking-tight text-text md:text-4xl lg:text-5xl">
-            The trusted wellbeing layer for modern enterprises.
+            The strategic growth engine for modern enterprises.
           </h2>
         </Reveal>
         <Stagger className="grid gap-6 sm:grid-cols-3">

@@ -3,19 +3,19 @@ import Card from '../components/ui/Card'
 
 const audiences = [
   {
-    title: 'Employees',
+    title: 'Enterprise Leaders',
     color: 'bg-primary',
     bullets: [
-      'A safe, anonymous space to express how you feel.',
-      'Guidance and reflection \u2014 at your own pace.',
+      'Real-time performance dashboards that surface growth opportunities.',
+      'Strategic insights to make faster, data-driven decisions.',
     ],
   },
   {
-    title: 'HR & Leadership',
+    title: 'Operations & Teams',
     color: 'bg-blue',
     bullets: [
-      'Weak signals surfaced before they become problems.',
-      'Actionable insights. Clear recommendations. Real impact.',
+      'Streamlined workflows that eliminate bottlenecks and boost efficiency.',
+      'Scalable tools designed to grow with your organization.',
     ],
   },
 ]
