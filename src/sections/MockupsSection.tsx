@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Reveal from '../components/motion/Reveal'
 
 const mockups = [
-  { src: '/assets/mockup-1.png', label: 'Wall Sign' },
-  { src: '/assets/mockup-2.png', label: 'Corporate ID' },
-  { src: '/assets/mockup-3.png', label: 'Stationery' },
   { src: '/assets/mockup-4.png', label: 'Mobile App Icon' },
+  { src: '/assets/mockup-2.png', label: 'Corporate ID' },
+  { src: '/assets/mockup-1.png', label: 'Wall Sign' },
+  { src: '/assets/mockup-3.png', label: 'Stationery' },
   { src: '/assets/mockup-5.png', label: 'Pin Badge' },
 ]
 
