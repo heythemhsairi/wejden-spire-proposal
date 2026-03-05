@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Reveal from '../components/motion/Reveal'
 
 const mockups = [
@@ -10,6 +11,8 @@ const mockups = [
 ]
 
 export default function MockupsSection() {
+  const [selected, setSelected] = useState<number | null>(null)
+
   return (
     <section id="context" className="slide bg-white">
       <div className="mx-auto w-full max-w-5xl px-8">
@@ -28,9 +31,10 @@ export default function MockupsSection() {
           {mockups.slice(0, 2).map((m, i) => (
             <Reveal key={m.label} delay={0.15 + i * 0.08}>
               <motion.div
-                className="group overflow-hidden rounded-2xl bg-bg ring-1 ring-border"
+                className="group cursor-pointer overflow-hidden rounded-2xl bg-bg ring-1 ring-border"
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.3 }}
+                onClick={() => setSelected(i)}
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -51,9 +55,10 @@ export default function MockupsSection() {
           {mockups.slice(2).map((m, i) => (
             <Reveal key={m.label} delay={0.3 + i * 0.08}>
               <motion.div
-                className="group overflow-hidden rounded-2xl bg-bg ring-1 ring-border"
+                className="group cursor-pointer overflow-hidden rounded-2xl bg-bg ring-1 ring-border"
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.3 }}
+                onClick={() => setSelected(i + 2)}
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -70,6 +75,43 @@ export default function MockupsSection() {
           ))}
         </div>
       </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selected !== null && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelected(null)}
+          >
+            <motion.div
+              className="relative max-h-[85vh] max-w-4xl overflow-hidden rounded-2xl bg-white shadow-xl"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={mockups[selected].src}
+                alt={mockups[selected].label}
+                className="max-h-[80vh] w-full object-contain"
+              />
+              <div className="flex items-center justify-between px-5 py-3">
+                <p className="text-sm font-medium text-text">{mockups[selected].label}</p>
+                <button
+                  onClick={() => setSelected(null)}
+                  className="rounded-lg px-3 py-1 text-xs font-medium text-text-muted transition-colors hover:bg-bg hover:text-text"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
