@@ -9,16 +9,17 @@
 
 @theme {
   --color-primary: #229346;
-  --color-blue: #2F6FE4;
-  --color-purple: #7A4DFF;
-  --color-bg: #F5F7FB;
-  --color-neutral: #E2E8F0;
-  --color-text: #0F172A;
+  --color-blue: #3C8F7A;
+  --color-purple: #5F8F8E;
+  --color-soft: #A8B6C2;
+  --color-bg: #F4F6F7;
+  --color-neutral: #E5DED5;
+  --color-text: #1F2933;
   --color-primary-light: #E6F4EC;
-  --color-blue-light: #E9F0FF;
-  --color-purple-light: #EEEBFF;
-  --color-text-muted: #64748B;
-  --color-border: #E2E8F0;
+  --color-blue-light: #E8F3F0;
+  --color-purple-light: #EEF3F3;
+  --color-text-muted: #6B7280;
+  --color-border: #E5DED5;
 
   --font-sans: 'Manrope', sans-serif;
 

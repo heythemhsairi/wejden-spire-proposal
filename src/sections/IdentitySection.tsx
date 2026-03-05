@@ -3,36 +3,37 @@ import { Stagger, StaggerItem } from '../components/motion/Stagger'
 
 const colors = [
   {
-    name: 'Primary Green',
+    name: 'Brand Green',
     hex: '#229346',
     rgb: 'rgb(34, 147, 70)',
+    role: 'Primary',
     usage: 'Primary actions, CTAs, success states, and the core brand accent.',
-    ratio: '4.6 : 1',
     light: '#E6F4EC',
   },
   {
-    name: 'Secondary Blue',
-    hex: '#2F6FE4',
-    rgb: 'rgb(47, 111, 228)',
-    usage: 'Links, data visualization, charts, and secondary interactive elements.',
-    ratio: '4.1 : 1',
-    light: '#E9F0FF',
+    name: 'Calm Teal',
+    hex: '#3C8F7A',
+    rgb: 'rgb(60, 143, 122)',
+    role: 'UI Green',
+    usage: 'Interactive UI elements, hover states, and secondary green accents.',
+    light: '#E8F3F0',
   },
   {
-    name: 'Accent Purple',
-    hex: '#7A4DFF',
-    rgb: 'rgb(122, 77, 255)',
-    usage: 'Highlights, premium features, badges, and tertiary accents.',
-    ratio: '4.8 : 1',
-    light: '#EEEBFF',
+    name: 'Teal Blue',
+    hex: '#5F8F8E',
+    rgb: 'rgb(95, 143, 142)',
+    role: 'Secondary',
+    usage: 'Supporting elements, data visualizations, and tertiary accents.',
+    light: '#EEF3F3',
   },
 ]
 
 const neutrals = [
-  { name: 'Background', hex: '#F5F7FB', usage: 'Page backgrounds, section fills' },
-  { name: 'Dark Text', hex: '#0F172A', usage: 'Headings, body text, primary content' },
-  { name: 'Secondary Text', hex: '#64748B', usage: 'Captions, labels, muted content' },
-  { name: 'Border', hex: '#E2E8F0', usage: 'Dividers, card outlines, separators' },
+  { name: 'Blue Grey', hex: '#A8B6C2', role: 'Soft Tech', usage: 'Subtle backgrounds, disabled states, soft UI elements' },
+  { name: 'Sand', hex: '#E5DED5', role: 'Neutral', usage: 'Borders, dividers, card outlines, separators' },
+  { name: 'Light', hex: '#F4F6F7', role: 'Background', usage: 'Page backgrounds, section fills, canvas' },
+  { name: 'Dark', hex: '#1F2933', role: 'Text', usage: 'Headings, body text, primary content' },
+  { name: 'Gray', hex: '#6B7280', role: 'Secondary Text', usage: 'Captions, labels, muted content' },
 ]
 
 export default function IdentitySection() {
@@ -51,8 +52,7 @@ export default function IdentitySection() {
         </Reveal>
         <Reveal delay={0.15}>
           <p className="mb-12 max-w-xl text-sm leading-relaxed text-text-muted">
-            A balanced three-color palette built for clarity, accessibility, and enterprise credibility.
-            All primary colors meet WCAG AA contrast requirements on white.
+            A nature-inspired palette anchored by Brand Green and softened with calm teals and warm neutrals — designed for trust, clarity, and enterprise credibility.
           </p>
         </Reveal>
 
@@ -63,10 +63,10 @@ export default function IdentitySection() {
               <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-border">
                 <div className="relative h-28" style={{ backgroundColor: c.hex }}>
                   <span
-                    className="absolute bottom-3 left-4 rounded-md px-2 py-0.5 text-[10px] font-semibold text-white"
+                    className="absolute top-3 right-4 rounded-md px-2 py-0.5 text-[10px] font-semibold text-white"
                     style={{ backgroundColor: 'rgba(0,0,0,0.25)' }}
                   >
-                    {c.ratio} on white
+                    {c.role}
                   </span>
                 </div>
                 <div className="p-5">
@@ -95,9 +95,9 @@ export default function IdentitySection() {
         {/* Neutrals */}
         <Reveal delay={0.3}>
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.15em] text-text-muted">
-            Neutrals
+            Neutrals &amp; System Colors
           </p>
-          <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
+          <div className="grid gap-3 grid-cols-2 sm:grid-cols-5">
             {neutrals.map((n) => (
               <div
                 key={n.hex}
@@ -108,8 +108,9 @@ export default function IdentitySection() {
                   style={{ backgroundColor: n.hex }}
                 />
                 <p className="mb-0.5 text-xs font-semibold text-text">{n.name}</p>
-                <p className="mb-1.5 font-mono text-[10px] text-text-muted">{n.hex}</p>
-                <p className="text-[10px] leading-relaxed text-text-muted">{n.usage}</p>
+                <p className="mb-0.5 font-mono text-[10px] text-text-muted">{n.hex}</p>
+                <p className="text-[10px] font-medium text-primary/60">{n.role}</p>
+                <p className="mt-1 text-[10px] leading-relaxed text-text-muted">{n.usage}</p>
               </div>
             ))}
           </div>
