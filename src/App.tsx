@@ -10,6 +10,8 @@ import LogoSection from './sections/LogoSection'
 import IconographySection from './sections/IconographySection'
 import ClearSpaceSection from './sections/ClearSpaceSection'
 import SymbolSection from './sections/SymbolSection'
+import AlproSymbolSection from './sections/AlproSymbolSection'
+import HeyproSymbolSection from './sections/HeyproSymbolSection'
 import MockupsSection from './sections/MockupsSection'
 import DeliverablesSection from './sections/DeliverablesSection'
 import NextStepsSection from './sections/NextStepsSection'
@@ -29,6 +31,8 @@ export default function App() {
         <IconographySection />
         <ClearSpaceSection />
         <SymbolSection />
+        <AlproSymbolSection />
+        <HeyproSymbolSection />
         <MockupsSection />
         <DeliverablesSection />
         <NextStepsSection />
