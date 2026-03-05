@@ -4,35 +4,38 @@ import { Stagger, StaggerItem } from '../components/motion/Stagger'
 const colors = [
   {
     name: 'Brand Green',
-    hex: '#229346',
-    rgb: 'rgb(34, 147, 70)',
+    hex: '#4BAA83',
+    rgb: 'rgb(75, 170, 131)',
     role: 'Primary',
+    ratio: '20%',
     usage: 'Primary actions, CTAs, success states, and the core brand accent.',
-    light: '#E6F4EC',
+    light: '#E8F5EF',
   },
   {
-    name: 'Calm Teal',
-    hex: '#3C8F7A',
-    rgb: 'rgb(60, 143, 122)',
-    role: 'UI Green',
-    usage: 'Interactive UI elements, hover states, and secondary green accents.',
-    light: '#E8F3F0',
-  },
-  {
-    name: 'Teal Blue',
-    hex: '#5F8F8E',
-    rgb: 'rgb(95, 143, 142)',
+    name: 'Calm Blue',
+    hex: '#6F8FB8',
+    rgb: 'rgb(111, 143, 184)',
     role: 'Secondary',
-    usage: 'Supporting elements, data visualizations, and tertiary accents.',
-    light: '#EEF3F3',
+    ratio: '10%',
+    usage: 'Links, data visualization, charts, and secondary interactive elements.',
+    light: '#E8EDF4',
+  },
+  {
+    name: 'Soft Purple',
+    hex: '#8A7CC8',
+    rgb: 'rgb(138, 124, 200)',
+    role: 'Accent',
+    ratio: '5%',
+    usage: 'Highlights, premium features, badges, and tertiary accents.',
+    light: '#EDEBF5',
   },
 ]
 
 const neutrals = [
-  { name: 'Blue Grey', hex: '#A8B6C2', role: 'Soft Tech', usage: 'Subtle backgrounds, disabled states, soft UI elements' },
-  { name: 'Sand', hex: '#E5DED5', role: 'Neutral', usage: 'Borders, dividers, card outlines, separators' },
-  { name: 'Light', hex: '#F4F6F7', role: 'Background', usage: 'Page backgrounds, section fills, canvas' },
-  { name: 'Dark', hex: '#1F2933', role: 'Text', usage: 'Headings, body text, primary content' },
+  { name: 'Light Accent', hex: '#B7C7DD', role: 'Soft Tech', usage: 'Subtle backgrounds, disabled states, soft UI elements' },
+  { name: 'Soft Neutral', hex: '#E7E3DD', role: 'Neutral', usage: 'Borders, dividers, card outlines, separators' },
+  { name: 'Light', hex: '#F6F5F3', role: 'Background', usage: 'Page backgrounds, section fills, canvas' },
+  { name: 'Dark', hex: '#24322C', role: 'Text', usage: 'Headings, body text, primary content' },
   { name: 'Gray', hex: '#6B7280', role: 'Secondary Text', usage: 'Captions, labels, muted content' },
 ]
 
@@ -52,7 +55,8 @@ export default function IdentitySection() {
         </Reveal>
         <Reveal delay={0.15}>
           <p className="mb-12 max-w-xl text-sm leading-relaxed text-text-muted">
-            A nature-inspired palette anchored by Brand Green and softened with calm teals and warm neutrals — designed for trust, clarity, and enterprise credibility.
+            A calm, psychology-tech palette anchored by Brand Green and balanced with blue and purple accents.
+            Usage ratio: 65% neutrals, 20% green, 10% blue, 5% purple.
           </p>
         </Reveal>
 
@@ -66,7 +70,7 @@ export default function IdentitySection() {
                     className="absolute top-3 right-4 rounded-md px-2 py-0.5 text-[10px] font-semibold text-white"
                     style={{ backgroundColor: 'rgba(0,0,0,0.25)' }}
                   >
-                    {c.role}
+                    {c.role} · {c.ratio}
                   </span>
                 </div>
                 <div className="p-5">

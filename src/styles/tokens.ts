@@ -1,26 +1,28 @@
 /** Wejden Spire — Design Tokens */
 
 export const colors = {
-  primary:   '#229346', // Brand Green
-  blue:      '#3C8F7A', // Calm Teal (UI Green)
-  purple:    '#5F8F8E', // Teal Blue (Secondary)
-  soft:      '#A8B6C2', // Blue Grey (Soft Tech)
-  bg:        '#F4F6F7', // Light (Background)
-  neutral:   '#E5DED5', // Sand (Neutral)
-  text:      '#1F2933', // Dark (Text)
-  white:     '#FFFFFF',
+  primary:      '#4BAA83', // Brand Green
+  primaryHover: '#3E8F70', // Hover / Active Green
+  blue:         '#6F8FB8', // Calm Blue (Secondary)
+  purple:       '#8A7CC8', // Soft Purple (Accent)
+  soft:         '#B7C7DD', // Light Accent Blue
+  bg:           '#F6F5F3', // Background
+  neutral:      '#E7E3DD', // Soft Neutral
+  text:         '#24322C', // Text
+  white:        '#FFFFFF',
   // Derived
-  primaryLight: '#E6F4EC',
-  blueLight:    '#E8F3F0',
-  purpleLight:  '#EEF3F3',
+  primaryLight: '#E8F5EF',
+  blueLight:    '#E8EDF4',
+  purpleLight:  '#EDEBF5',
   textMuted:    '#6B7280',
-  border:       '#E5DED5',
+  border:       '#E7E3DD',
 } as const
 
 export const gradients = {
-  greenTeal:  'linear-gradient(135deg, #229346 0%, #3C8F7A 100%)',
-  greenBlue:  'linear-gradient(135deg, #229346 0%, #5F8F8E 100%)',
-  subtle:     'linear-gradient(180deg, #F4F6F7 0%, #FFFFFF 100%)',
+  greenBlue:    'linear-gradient(135deg, #4BAA83 0%, #6F8FB8 100%)',
+  bluePurple:   'linear-gradient(135deg, #6F8FB8 0%, #8A7CC8 100%)',
+  greenPurple:  'linear-gradient(135deg, #4BAA83 0%, #8A7CC8 100%)',
+  subtle:       'linear-gradient(180deg, #F6F5F3 0%, #FFFFFF 100%)',
 } as const
 
 export const typography = {
@@ -67,7 +69,7 @@ export const shadows = {
   md:   '0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04)',
   lg:   '0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03)',
   xl:   '0 20px 25px -5px rgba(0,0,0,0.08), 0 10px 10px -5px rgba(0,0,0,0.02)',
-  glow: '0 0 40px rgba(34,147,70,0.15)',
+  glow: '0 0 40px rgba(75,170,131,0.15)',
 } as const
 
 export const motion = {
