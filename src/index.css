@@ -78,6 +78,15 @@ body {
   padding-bottom: 2rem;
 }
 
+/* Mobile: let slides grow naturally so content is never clipped */
+@media (max-width: 768px) {
+  .slide {
+    min-height: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
 /* ── Presentation mode ── */
 .present-container {
   height: 100dvh;
@@ -92,6 +101,23 @@ body {
   min-height: 100dvh;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+/* Mobile: disable snap in presentation mode too, allow free scrolling */
+@media (max-width: 768px) {
+  .present-container {
+    scroll-snap-type: none;
+    height: auto;
+    overflow-y: visible;
+  }
+  .present-container .slide {
+    scroll-snap-align: none;
+    height: auto;
+    min-height: auto;
+    overflow-y: visible;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 /* ── Text gradient ── */
