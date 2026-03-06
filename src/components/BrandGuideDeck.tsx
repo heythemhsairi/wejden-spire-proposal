@@ -207,6 +207,25 @@ function Slide({
         </div>
       )}
 
+      {/* ── GALLERY ── */}
+      {L === 'gallery' && (
+        <div className="layout-gallery">
+          <div className="gal-top">
+            <h2 className="s-title">{slide.title}</h2>
+            {slide.body && <p className="s-body">{slide.body}</p>}
+          </div>
+          {slide.images && (
+            <div className="gal-grid">
+              {slide.images.map((src, i) => (
+                <figure key={i} className="gal-item">
+                  <img src={src} alt={`Moodboard ${i + 1}`} loading="lazy" />
+                </figure>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
       {/* ── SYMBOL ── */}
       {L === 'symbol' && (
         <div className="layout-symbol">

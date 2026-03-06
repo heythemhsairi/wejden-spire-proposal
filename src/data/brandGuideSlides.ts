@@ -64,6 +64,23 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     body: 'Structured for fast stakeholder review and production handoff.',
   },
 
+  // ─── WELCOME ───
+  {
+    id: 'welcome',
+    chapter: 'Intro',
+    layout: 'split',
+    kicker: 'Welcome',
+    title: 'About This Guide',
+    body: 'This document defines the visual and verbal identity of Wejden Spire. It serves as the single source of truth for anyone creating brand materials — from marketing teams to external partners.',
+    bullets: [
+      'Consistent application across all digital and print touchpoints.',
+      'Clear rules for logo, color, typography, and tone of voice.',
+      'Built for both creative teams and technical handoff.',
+    ],
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&q=80',
+    imageAlt: 'Modern office workspace',
+  },
+
   // ─── 01 BRAND CORE ───
   {
     id: 'ch-brand',
@@ -209,6 +226,37 @@ export const brandGuideSlides: BrandGuideSlide[] = [
       'Support 3: Clear accountability across teams.',
     ],
     body: 'Use this hierarchy in sales decks, landing pages, and product onboarding.',
+  },
+  {
+    id: 'brand-values',
+    chapter: 'Brand Core',
+    layout: 'split',
+    kicker: 'Brand Core',
+    title: 'Core Values',
+    body: 'Values shape every decision, interaction, and product surface.',
+    bullets: [
+      'Integrity: transparent data, honest communication.',
+      'Innovation: always evolving, never complacent.',
+      'Impact: every feature must drive measurable outcomes.',
+      'Inclusion: accessible insights for every team member.',
+    ],
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80',
+    imageAlt: 'Team collaborating at a table',
+  },
+  {
+    id: 'narrative-framework',
+    chapter: 'Brand Core',
+    layout: 'text',
+    kicker: 'Brand Core',
+    title: 'Narrative Framework',
+    body: 'Every brand story follows this arc: Problem → Friction → Decision Risk → System Clarity → Business Lift.',
+    bullets: [
+      'State the cost of unclear decisions first.',
+      'Reveal where teams lose momentum today.',
+      'Position Wejden Spire as the alignment layer.',
+      'Close with measurable lift and governance confidence.',
+    ],
+    callout: 'The story should always end with a clear next step the audience can take.',
   },
 
   // ─── 02 LOGO ───
@@ -385,6 +433,35 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     ],
     callout: 'Avoid gradients behind dense text blocks or data tables.',
   },
+  {
+    id: 'color-ratios',
+    chapter: 'Color',
+    layout: 'text',
+    kicker: 'Visual Identity',
+    title: 'Color Usage Ratios',
+    body: 'Balance is critical. The palette follows a 65-20-10-5 ratio across all brand surfaces.',
+    bullets: [
+      '65% Neutrals: backgrounds, text, borders — quiet and readable.',
+      '20% Brand Green: CTAs, active states, positive trends, navigation highlights.',
+      '10% Calm Blue: data layers, secondary interactions, informational states.',
+      '5% Soft Purple: premium features, innovation cues, special badges.',
+    ],
+    callout: 'Never use green as a background fill behind long-form text content.',
+  },
+  {
+    id: 'tint-system',
+    chapter: 'Color',
+    layout: 'palette',
+    kicker: 'Visual Identity',
+    title: 'Tint System',
+    body: 'Light tints provide supportive surfaces without competing with primary brand moments.',
+    swatches: [
+      { label: 'Green Tint', hex: '#E8F5EF', role: 'Cards, success states' },
+      { label: 'Blue Tint', hex: '#E8EDF4', role: 'Info panels, quiet depth' },
+      { label: 'Purple Tint', hex: '#EDEBF5', role: 'Tags, contextual badges' },
+      { label: 'Light Accent', hex: '#B7C7DD', role: 'Decorative borders' },
+    ],
+  },
 
   // ─── 04 TYPOGRAPHY ───
   {
@@ -517,6 +594,50 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     subtitle: 'Real-world brand in action.',
   },
   {
+    id: 'photography-direction',
+    chapter: 'Applications',
+    layout: 'split',
+    kicker: 'Photography',
+    title: 'Photography Direction',
+    body: 'Visual imagery should feel aspirational yet grounded — real teams making real decisions. Avoid generic stock. Prioritize clarity, natural light, and strategic context.',
+    bullets: [
+      'Prefer natural light with warm, balanced tones.',
+      'Show teams, workflows, and moments of decision.',
+      'Maintain palette harmony — greens, blues, and warm neutrals.',
+      'Use depth-of-field to create hierarchy and focus.',
+    ],
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80',
+    imageAlt: 'Team meeting in a modern office',
+  },
+  {
+    id: 'imagery-moodboard',
+    chapter: 'Applications',
+    layout: 'gallery',
+    kicker: 'Moodboard',
+    title: 'Visual Moodboard',
+    body: 'The brand aesthetic sits at the intersection of nature, technology, and professional clarity.',
+    images: [
+      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1497215842964-222b430dc094?w=400&h=300&fit=crop&q=80',
+    ],
+  },
+  {
+    id: 'photo-donts',
+    chapter: 'Applications',
+    layout: 'text',
+    kicker: 'Photography',
+    title: "Photography Don'ts",
+    bullets: [
+      'No overly staged stock visuals with generic symbolism.',
+      'No low-contrast backgrounds behind key text.',
+      'No saturated color casts that fight the palette.',
+      'No cluttered scenes with unclear focal point.',
+      'No images that feel cold, impersonal, or disconnected from the brand.',
+    ],
+  },
+  {
     id: 'mockup-mobile',
     chapter: 'Applications',
     layout: 'image',
@@ -576,6 +697,36 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     kicker: 'Chapter Seven',
     title: 'Delivery',
     subtitle: 'Implementation and handoff.',
+  },
+  {
+    id: 'deliverables',
+    chapter: 'Delivery',
+    layout: 'text',
+    kicker: 'Delivery',
+    title: 'What You Receive',
+    body: 'A complete production-ready brand package for immediate rollout.',
+    bullets: [
+      'Logo Pack: SVG, PNG (1x–4x), EPS for all lockups and color variants.',
+      'Color Tokens: CSS variables, Tailwind config, Figma styles, and hex/RGB specs.',
+      'Typography Kit: Google Fonts config + self-hosted Meral Sans OTF files.',
+      'Icon Set: 24 px SVG icon library with consistent stroke system.',
+      'Brand Guide: This interactive deck + exported PDF at 1920×1080.',
+      'Mockup Library: 5 photorealistic application mockups in high resolution.',
+    ],
+  },
+  {
+    id: 'file-formats',
+    chapter: 'Delivery',
+    layout: 'text',
+    kicker: 'Delivery',
+    title: 'File Formats & Standards',
+    bullets: [
+      'Digital: SVG (preferred), PNG @2x minimum, WebP for web optimization.',
+      'Print: PDF/X-1a for offset, 300 DPI minimum, CMYK color space.',
+      'Motion: Lottie JSON for animated icon assets.',
+      'Figma: Component library with auto-layout and variants.',
+    ],
+    callout: 'All source files will be delivered via a shared Google Drive or Figma workspace.',
   },
   {
     id: 'delivery-roadmap',
