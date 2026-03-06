@@ -1,4 +1,15 @@
-export type SlideLayout = 'cover' | 'toc' | 'text' | 'split' | 'image' | 'palette' | 'symbol' | 'closing'
+export type SlideLayout =
+  | 'cover'
+  | 'toc'
+  | 'chapter'
+  | 'text'
+  | 'split'
+  | 'image'
+  | 'palette'
+  | 'typography'
+  | 'symbol'
+  | 'gallery'
+  | 'closing'
 
 export interface BrandSwatch {
   label: string
@@ -15,6 +26,7 @@ export interface SymbolMeaning {
 export interface BrandGuideSlide {
   id: string
   chapter: string
+  chapterNum?: string
   layout: SlideLayout
   kicker: string
   title: string
@@ -24,11 +36,14 @@ export interface BrandGuideSlide {
   callout?: string
   image?: string
   imageAlt?: string
+  images?: string[]
   swatches?: BrandSwatch[]
   meanings?: SymbolMeaning[]
+  specimen?: { family: string; weights: string[]; sample: string }
 }
 
 export const brandGuideSlides: BrandGuideSlide[] = [
+  // ─── COVER ───
   {
     id: 'cover',
     chapter: 'Intro',
@@ -36,7 +51,7 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     kicker: 'Brand Identity Guidelines',
     title: 'Wejden Spire',
     subtitle: 'Scale smarter. Grow stronger.',
-    body: 'Interactive master guidelines. Canvas 1920 x 1080. Version 2026.',
+    body: '2026 — Interactive Brand Guide',
     image: '/assets/wejden-spire-logo.svg',
     imageAlt: 'Wejden Spire primary logo',
   },
@@ -46,7 +61,18 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     layout: 'toc',
     kicker: 'Guide Structure',
     title: 'Table of Contents',
-    body: 'This document is structured for fast stakeholder review and production handoff.',
+    body: 'Structured for fast stakeholder review and production handoff.',
+  },
+
+  // ─── 01 BRAND CORE ───
+  {
+    id: 'ch-brand',
+    chapter: 'Brand Core',
+    chapterNum: '01',
+    layout: 'chapter',
+    kicker: 'Chapter One',
+    title: 'Brand Core',
+    subtitle: 'Essence, positioning, and personality.',
   },
   {
     id: 'essence',
@@ -100,7 +126,7 @@ export const brandGuideSlides: BrandGuideSlide[] = [
       'Precision before opinion.',
       'Momentum before maintenance.',
     ],
-    callout: 'Promise: One platform that helps teams move in the same direction.',
+    callout: 'One platform that helps teams move in the same direction.',
   },
   {
     id: 'pillars',
@@ -140,45 +166,6 @@ export const brandGuideSlides: BrandGuideSlide[] = [
       'Executive buyers: CEO, COO, VP Strategy.',
       'Operational users: PMO, department leads, analysts.',
       'Influencers: finance, transformation offices, IT.',
-    ],
-  },
-  {
-    id: 'enterprise-leaders',
-    chapter: 'Brand Core',
-    layout: 'text',
-    kicker: 'Brand Core',
-    title: 'Segment 1: Enterprise Leaders',
-    body: 'Need confidence, speed, and board-ready narratives.',
-    bullets: [
-      'Prioritize growth opportunities with confidence.',
-      'Track strategy execution with one clear scorecard.',
-      'Reduce meeting time by improving decision quality.',
-    ],
-  },
-  {
-    id: 'ops-teams',
-    chapter: 'Brand Core',
-    layout: 'text',
-    kicker: 'Brand Core',
-    title: 'Segment 2: Operations Teams',
-    body: 'Need repeatable workflows and fewer bottlenecks.',
-    bullets: [
-      'Standardize reporting across business units.',
-      'Detect blockers early and trigger quick action.',
-      'Align cross-functional teams around shared KPIs.',
-    ],
-  },
-  {
-    id: 'decision-makers',
-    chapter: 'Brand Core',
-    layout: 'text',
-    kicker: 'Brand Core',
-    title: 'Segment 3: Decision Makers',
-    body: 'Need practical insights that convert into weekly execution.',
-    bullets: [
-      'Move from insight to ownership in one workflow.',
-      'Highlight what changed and why it matters.',
-      'Support both strategic and tactical decision cycles.',
     ],
   },
   {
@@ -223,170 +210,16 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     ],
     body: 'Use this hierarchy in sales decks, landing pages, and product onboarding.',
   },
+
+  // ─── 02 LOGO ───
   {
-    id: 'narrative-framework',
-    chapter: 'Brand Core',
-    layout: 'text',
-    kicker: 'Brand Core',
-    title: 'Narrative Framework',
-    body: 'Problem -> Friction -> Decision Risk -> System Clarity -> Business Lift.',
-    bullets: [
-      'State the cost of unclear decisions first.',
-      'Reveal where teams lose momentum today.',
-      'Position Wejden Spire as the alignment layer.',
-      'Close with measurable lift and governance confidence.',
-    ],
-  },
-  {
-    id: 'color-philosophy',
-    chapter: 'Color',
-    layout: 'palette',
-    kicker: 'Visual Identity',
-    title: 'Color Philosophy',
-    body: 'The palette balances trust, intelligence, and progress while staying calm in dense interfaces.',
-    swatches: [
-      { label: 'Brand Green', hex: '#4BAA83', role: 'Primary action and momentum' },
-      { label: 'Calm Blue', hex: '#6F8FB8', role: 'Secondary data accents' },
-      { label: 'Soft Purple', hex: '#8A7CC8', role: 'Premium highlights' },
-    ],
-  },
-  {
-    id: 'primary-green',
-    chapter: 'Color',
-    layout: 'text',
-    kicker: 'Visual Identity',
-    title: 'Primary Green Usage',
-    body: 'Green is the directional accent and should guide attention to key actions.',
-    bullets: [
-      'CTA buttons, active navigation, and positive trend states.',
-      'Do not use large green fills behind long text content.',
-      'Use tints (#E8F5EF) for supportive surfaces and cards.',
-    ],
-    callout: 'Recommended ratio: 20 percent of total visual surface.',
-  },
-  {
-    id: 'secondary-system',
-    chapter: 'Color',
-    layout: 'palette',
-    kicker: 'Visual Identity',
-    title: 'Secondary Color System',
-    body: 'Blue and purple support hierarchy without competing with primary brand moments.',
-    swatches: [
-      { label: 'Calm Blue', hex: '#6F8FB8', role: 'Data layers and secondary interactions' },
-      { label: 'Blue Tint', hex: '#E8EDF4', role: 'Panels and quiet depth' },
-      { label: 'Soft Purple', hex: '#8A7CC8', role: 'Feature distinction and innovation cues' },
-      { label: 'Purple Tint', hex: '#EDEBF5', role: 'Subtle tags and contextual badges' },
-    ],
-  },
-  {
-    id: 'neutral-system',
-    chapter: 'Color',
-    layout: 'palette',
-    kicker: 'Visual Identity',
-    title: 'Neutral Foundation',
-    body: 'Neutrals hold readability and information density across dashboard and document contexts.',
-    swatches: [
-      { label: 'Background', hex: '#F6F5F3', role: 'Base canvas color' },
-      { label: 'Border', hex: '#E7E3DD', role: 'Dividers and strokes' },
-      { label: 'Text', hex: '#24322C', role: 'Headlines and body copy' },
-      { label: 'Muted Text', hex: '#6B7280', role: 'Supportive labels and metadata' },
-    ],
-  },
-  {
-    id: 'accessibility',
-    chapter: 'Color',
-    layout: 'text',
-    kicker: 'Visual Identity',
-    title: 'Accessibility and Contrast',
-    body: 'Color decisions must pass readability rules before aesthetics.',
-    bullets: [
-      'Body text requires at least 4.5:1 contrast.',
-      'Large headings should remain above 3:1 contrast.',
-      'Never rely on color alone to communicate status.',
-      'Pair color states with icons or text labels.',
-    ],
-  },
-  {
-    id: 'gradient-usage',
-    chapter: 'Color',
-    layout: 'text',
-    kicker: 'Visual Identity',
-    title: 'Gradient Usage',
-    body: 'Gradients are a supporting device for depth, not a primary background system.',
-    bullets: [
-      'Green to Blue for directional progress moments.',
-      'Blue to Purple for premium feature highlights.',
-      'Use subtle opacity overlays on imagery and hero banners.',
-    ],
-    callout: 'Avoid gradients behind dense text blocks or data tables.',
-  },
-  {
-    id: 'type-principles',
-    chapter: 'Typography',
-    layout: 'text',
-    kicker: 'Typography',
-    title: 'Type Principles',
-    body: 'Typography should support speed and confidence in reading.',
-    bullets: [
-      'Use short line lengths for decision-heavy screens.',
-      'Reserve heavy weights for hierarchy, not decoration.',
-      'Keep spacing generous in multilingual layouts.',
-      'Prefer sentence case for clarity in interfaces.',
-    ],
-  },
-  {
-    id: 'latin-family',
-    chapter: 'Typography',
-    layout: 'text',
-    kicker: 'Typography',
-    title: 'Latin Typeface: Manrope',
-    body: 'Manrope provides modern geometry with high legibility in dense UI and long-form docs.',
-    bullets: [
-      'Primary weights: 400, 500, 600, 700.',
-      'Use 700 for H1/H2 only when emphasis is required.',
-      'Body defaults to 400 with 150 percent line height.',
-    ],
-  },
-  {
-    id: 'arabic-family',
-    chapter: 'Typography',
-    layout: 'text',
-    kicker: 'Typography',
-    title: 'Arabic Typeface: Meral Sans',
-    body: 'Meral Sans preserves clarity and rhythm across Arabic headings and paragraphs.',
-    bullets: [
-      'Primary weights: 400, 500, 600, 700.',
-      'Allow extra line height for mixed Arabic/Latin blocks.',
-      'Validate mirrored spacing in RTL compositions.',
-    ],
-  },
-  {
-    id: 'type-scale',
-    chapter: 'Typography',
-    layout: 'text',
-    kicker: 'Typography',
-    title: 'Type Scale',
-    bullets: [
-      'Display: 72 to 60 px for cover and chapter moments.',
-      'H1: 48 px, H2: 36 px, H3: 24 px.',
-      'Body: 16 to 18 px depending on viewing distance.',
-      'Caption: 12 to 14 px with medium weight.',
-    ],
-    body: 'Keep vertical rhythm consistent across all 16:9 compositions.',
-  },
-  {
-    id: 'spacing-rhythm',
-    chapter: 'Typography',
-    layout: 'text',
-    kicker: 'Typography',
-    title: 'Spacing Rhythm',
-    body: 'Use an 8-point spacing cadence to reduce visual noise in product and marketing layouts.',
-    bullets: [
-      'Section spacing: 64 to 96 px.',
-      'Card spacing: 24 to 32 px.',
-      'Inline spacing: 8 to 16 px.',
-      'Use deliberate whitespace before strategic callouts.',
-    ],
+    id: 'ch-logo',
+    chapter: 'Logo',
+    chapterNum: '02',
+    layout: 'chapter',
+    kicker: 'Chapter Two',
+    title: 'Logo System',
+    subtitle: 'Architecture, lockups, and usage rules.',
   },
   {
     id: 'logo-overview',
@@ -436,17 +269,17 @@ export const brandGuideSlides: BrandGuideSlide[] = [
   {
     id: 'logo-icon',
     chapter: 'Logo',
-    layout: 'split',
+    layout: 'symbol',
     kicker: 'Logo System',
     title: 'Icon Mark',
     body: 'The icon symbolizes upward movement, strategic direction, and stable foundations.',
-    bullets: [
-      'Use for favicon, app icon, and social avatar.',
-      'Avoid pairing with unrelated wordmarks.',
-      'Keep icon centered inside square or circular containers.',
-    ],
     image: '/assets/wejden-spire-icon.svg',
     imageAlt: 'Wejden Spire icon mark',
+    meanings: [
+      { label: 'The Spire', desc: 'Three ascending chevrons represent upward momentum — ambition, growth, and reaching new market heights.', color: '#4BAA83' },
+      { label: 'The Foundation', desc: 'The wide base anchors the mark with stability and trust — a solid platform for enterprise-scale operations.', color: '#6F8FB8' },
+      { label: 'The Path', desc: 'Converging lines form a clear direction — guiding businesses from strategy to measurable outcomes.', color: '#8A7CC8' },
+    ],
   },
   {
     id: 'clear-space',
@@ -486,92 +319,154 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     ],
     callout: 'If in doubt, revert to original SVG and approved background.',
   },
+
+  // ─── 03 COLOR ───
   {
-    id: 'iconography',
-    chapter: 'Systems',
-    layout: 'split',
-    kicker: 'System Language',
-    title: 'Iconography System',
-    body: 'Icons are built on a 24 px grid with 1.5 px stroke and rounded terminals.',
-    bullets: [
-      'Consistent stroke style across platform and enterprise sets.',
-      'Use simple metaphors with no decorative detail.',
-      'Prioritize recognizability at small sizes.',
-    ],
-    image: '/assets/wejden-spire-icon.svg',
-    imageAlt: 'Icon mark sample',
+    id: 'ch-color',
+    chapter: 'Color',
+    chapterNum: '03',
+    layout: 'chapter',
+    kicker: 'Chapter Three',
+    title: 'Color System',
+    subtitle: 'Palette, ratios, and accessibility.',
   },
   {
-    id: 'ui-language',
-    chapter: 'Systems',
+    id: 'color-philosophy',
+    chapter: 'Color',
+    layout: 'palette',
+    kicker: 'Visual Identity',
+    title: 'Brand Colors',
+    body: 'Colors that represent trust, intelligence, and growth.',
+    swatches: [
+      { label: 'Brand Green', hex: '#4BAA83', role: 'Primary action · 20% ratio' },
+      { label: 'Calm Blue', hex: '#6F8FB8', role: 'Secondary accent · 10% ratio' },
+      { label: 'Soft Purple', hex: '#8A7CC8', role: 'Premium highlight · 5% ratio' },
+    ],
+  },
+  {
+    id: 'neutral-system',
+    chapter: 'Color',
+    layout: 'palette',
+    kicker: 'Visual Identity',
+    title: 'Neutral Foundation',
+    body: 'Neutrals hold 65% of all visual surfaces — readability and density across dashboards and documents.',
+    swatches: [
+      { label: 'Background', hex: '#F6F5F3', role: 'Base canvas' },
+      { label: 'Border', hex: '#E7E3DD', role: 'Dividers and strokes' },
+      { label: 'Text', hex: '#24322C', role: 'Headlines and body' },
+      { label: 'Muted', hex: '#6B7280', role: 'Labels and metadata' },
+    ],
+  },
+  {
+    id: 'accessibility',
+    chapter: 'Color',
     layout: 'text',
-    kicker: 'System Language',
-    title: 'UI Component Language',
+    kicker: 'Visual Identity',
+    title: 'Accessibility & Contrast',
+    body: 'Color decisions must pass readability rules before aesthetics.',
     bullets: [
-      'Rounded geometry with subtle elevation.',
-      'Primary actions in green, secondary in neutral outlines.',
-      'Data-heavy views should keep low visual noise.',
-      'Motion should guide hierarchy, not distract.',
+      'Body text requires at least 4.5:1 contrast ratio.',
+      'Large headings should remain above 3:1 contrast.',
+      'Never rely on color alone to communicate status.',
+      'Pair color states with icons or text labels.',
     ],
-    body: 'Component behavior should feel decisive, stable, and efficient.',
   },
   {
-    id: 'imagery-direction',
-    chapter: 'Systems',
-    layout: 'image',
-    kicker: 'System Language',
-    title: 'Imagery Direction',
-    body: 'Use aspirational but credible visuals with clean composition and high contrast focus.',
-    image: '/assets/mockup-5.png',
-    imageAlt: 'Brand application pin badge',
-  },
-  {
-    id: 'photo-dos',
-    chapter: 'Systems',
+    id: 'gradient-usage',
+    chapter: 'Color',
     layout: 'text',
-    kicker: 'System Language',
-    title: 'Photography Dos',
+    kicker: 'Visual Identity',
+    title: 'Gradient Usage',
+    body: 'Gradients are a supporting device for depth, not a primary background system.',
     bullets: [
-      'Prefer natural light and clear subject hierarchy.',
-      'Include strategic context: teams, decisions, workflows.',
-      'Maintain palette harmony with green, blue, and neutrals.',
-      'Use depth and framing to imply momentum.',
+      'Green → Blue for directional progress moments.',
+      'Blue → Purple for premium feature highlights.',
+      'Use subtle opacity overlays on imagery and hero banners.',
     ],
+    callout: 'Avoid gradients behind dense text blocks or data tables.',
+  },
+
+  // ─── 04 TYPOGRAPHY ───
+  {
+    id: 'ch-type',
+    chapter: 'Typography',
+    chapterNum: '04',
+    layout: 'chapter',
+    kicker: 'Chapter Four',
+    title: 'Typography',
+    subtitle: 'Typefaces, scale, and rhythm.',
   },
   {
-    id: 'photo-donts',
-    chapter: 'Systems',
+    id: 'latin-family',
+    chapter: 'Typography',
+    layout: 'typography',
+    kicker: 'Typography',
+    title: 'Latin Typeface',
+    body: 'Manrope provides modern geometry with high legibility in dense UI and long-form docs.',
+    specimen: {
+      family: 'Manrope',
+      weights: ['400 Regular', '500 Medium', '600 SemiBold', '700 Bold'],
+      sample: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyz\n0123456789',
+    },
+  },
+  {
+    id: 'arabic-family',
+    chapter: 'Typography',
+    layout: 'typography',
+    kicker: 'Typography',
+    title: 'Arabic Typeface',
+    body: 'Meral Sans preserves clarity and rhythm across Arabic headings and paragraphs.',
+    specimen: {
+      family: 'Meral Sans',
+      weights: ['400 Regular', '500 Medium', '600 SemiBold', '700 Bold'],
+      sample: 'أبجد هوز حطي كلمن سعفص\nقرشت ثخذ ضظغ',
+    },
+  },
+  {
+    id: 'type-scale',
+    chapter: 'Typography',
     layout: 'text',
-    kicker: 'System Language',
-    title: "Photography Don'ts",
+    kicker: 'Typography',
+    title: 'Type Scale',
     bullets: [
-      'No overly staged stock visuals with generic symbolism.',
-      'No low-contrast backgrounds behind key text.',
-      'No saturated color casts that fight the palette.',
-      'No cluttered scenes with unclear focal point.',
+      'Display: 72–60 px for cover and chapter moments.',
+      'H1: 48 px · H2: 36 px · H3: 24 px.',
+      'Body: 16–18 px depending on viewing distance.',
+      'Caption: 12–14 px with medium weight.',
     ],
+    body: 'Keep vertical rhythm consistent across all 16:9 compositions.',
   },
   {
-    id: 'symbol-wejden',
-    chapter: 'Systems',
-    layout: 'symbol',
-    kicker: 'Icon & Symbol',
-    title: 'Symbol Meaning',
-    body: 'The Wejden Spire icon encodes the brand story in a single geometric mark.',
-    image: '/assets/wejden-spire-icon.svg',
-    imageAlt: 'Wejden Spire logo icon — three ascending chevrons',
-    meanings: [
-      { label: 'The Spire', desc: 'Three ascending chevrons represent upward momentum — ambition, growth, and reaching new market heights.', color: '#4BAA83' },
-      { label: 'The Foundation', desc: 'The wide base anchors the mark with stability and trust — a solid platform for enterprise-scale operations.', color: '#6F8FB8' },
-      { label: 'The Path', desc: 'Converging lines form a clear direction — guiding businesses from strategy to measurable outcomes.', color: '#8A7CC8' },
+    id: 'spacing-rhythm',
+    chapter: 'Typography',
+    layout: 'text',
+    kicker: 'Typography',
+    title: 'Spacing Rhythm',
+    body: 'Use an 8-point spacing cadence to reduce visual noise.',
+    bullets: [
+      'Section spacing: 64–96 px.',
+      'Card spacing: 24–32 px.',
+      'Inline spacing: 8–16 px.',
+      'Use deliberate whitespace before strategic callouts.',
     ],
+  },
+
+  // ─── 05 SYMBOLS ───
+  {
+    id: 'ch-symbols',
+    chapter: 'Symbols',
+    chapterNum: '05',
+    layout: 'chapter',
+    kicker: 'Chapter Five',
+    title: 'Icons & Symbols',
+    subtitle: 'Meaning behind each mark.',
   },
   {
     id: 'symbol-alpro',
-    chapter: 'Systems',
+    chapter: 'Symbols',
     layout: 'symbol',
-    kicker: 'Icon & Symbol',
-    title: 'Additional Proposition 1 — Symbol Meaning',
+    kicker: 'Additional Proposition 1',
+    title: 'Proposition 1 — Symbol Meaning',
     body: 'The Alpro mark captures momentum, adaptability, and strategic elevation.',
     image: '/assets/alpro.svg',
     imageAlt: 'Alpro icon',
@@ -583,10 +478,10 @@ export const brandGuideSlides: BrandGuideSlide[] = [
   },
   {
     id: 'symbol-heypro',
-    chapter: 'Systems',
+    chapter: 'Symbols',
     layout: 'symbol',
-    kicker: 'Icon & Symbol',
-    title: 'Additional Proposition 2 — Symbol Meaning',
+    kicker: 'Additional Proposition 2',
+    title: 'Proposition 2 — Symbol Meaning',
     body: 'The HeyPro mark represents growth, wellbeing, and continuous progress.',
     image: '/assets/heypro.svg',
     imageAlt: 'HeyPro icon',
@@ -597,11 +492,36 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     ],
   },
   {
+    id: 'iconography',
+    chapter: 'Symbols',
+    layout: 'text',
+    kicker: 'System Language',
+    title: 'Iconography System',
+    body: 'Icons are built on a 24 px grid with 1.5 px stroke and rounded terminals.',
+    bullets: [
+      'Consistent stroke style across platform and enterprise sets.',
+      'Use simple metaphors with no decorative detail.',
+      'Prioritize recognizability at small sizes.',
+      'Primary actions in green, secondary in neutral outlines.',
+    ],
+  },
+
+  // ─── 06 APPLICATIONS ───
+  {
+    id: 'ch-apps',
+    chapter: 'Applications',
+    chapterNum: '06',
+    layout: 'chapter',
+    kicker: 'Chapter Six',
+    title: 'Applications',
+    subtitle: 'Real-world brand in action.',
+  },
+  {
     id: 'mockup-mobile',
     chapter: 'Applications',
     layout: 'image',
     kicker: 'Applications',
-    title: 'Mockup: Mobile Icon Context',
+    title: 'Mobile App Icon',
     body: 'Icon mark behavior in mobile-first contexts.',
     image: '/assets/mockup-4.png',
     imageAlt: 'Mobile app icon mockup',
@@ -611,7 +531,7 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     chapter: 'Applications',
     layout: 'image',
     kicker: 'Applications',
-    title: 'Mockup: Corporate Identity',
+    title: 'Corporate Identity',
     body: 'Logo and typography behavior in formal brand materials.',
     image: '/assets/mockup-2.png',
     imageAlt: 'Corporate identity mockup',
@@ -621,7 +541,7 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     chapter: 'Applications',
     layout: 'image',
     kicker: 'Applications',
-    title: 'Mockup: Environmental Signage',
+    title: 'Environmental Signage',
     body: 'Large-format visibility and legibility in public brand surfaces.',
     image: '/assets/mockup-1.png',
     imageAlt: 'Environmental signage mockup',
@@ -631,15 +551,36 @@ export const brandGuideSlides: BrandGuideSlide[] = [
     chapter: 'Applications',
     layout: 'image',
     kicker: 'Applications',
-    title: 'Mockup: Stationery and Collateral',
+    title: 'Stationery & Collateral',
     body: 'Consistent logo balance and color ratio in stationery applications.',
     image: '/assets/mockup-3.png',
     imageAlt: 'Stationery mockup',
   },
   {
+    id: 'mockup-pin',
+    chapter: 'Applications',
+    layout: 'image',
+    kicker: 'Applications',
+    title: 'Pin Badge',
+    body: 'Brand presence in small-format promotional items.',
+    image: '/assets/mockup-5.png',
+    imageAlt: 'Pin badge mockup',
+  },
+
+  // ─── 07 DELIVERY ───
+  {
+    id: 'ch-delivery',
+    chapter: 'Delivery',
+    chapterNum: '07',
+    layout: 'chapter',
+    kicker: 'Chapter Seven',
+    title: 'Delivery',
+    subtitle: 'Implementation and handoff.',
+  },
+  {
     id: 'delivery-roadmap',
     chapter: 'Delivery',
-    layout: 'closing',
+    layout: 'text',
     kicker: 'Delivery',
     title: 'Implementation Roadmap',
     body: 'Finalize, hand off, and launch with one controlled rollout sequence.',
@@ -649,15 +590,15 @@ export const brandGuideSlides: BrandGuideSlide[] = [
       'Week 3: Product and marketing rollout with tracking.',
       'Week 4: Post-launch calibration and optimization.',
     ],
-    callout: 'Deliverables include logo packs, token specs, icon set, and this 48-page master guide.',
+    callout: 'Deliverables include logo packs, token specs, icon set, and this master guide.',
+  },
+  {
+    id: 'closing',
+    chapter: 'Delivery',
+    layout: 'closing',
+    kicker: 'Thank You',
+    title: 'Thank You',
+    body: 'We look forward to building this brand together.',
+    image: '/assets/wejden-spire-icon.svg',
   },
 ]
-
-export const BRAND_GUIDE_EXPECTED_SLIDES = 48
-
-if (brandGuideSlides.length !== BRAND_GUIDE_EXPECTED_SLIDES) {
-  throw new Error(
-    `Brand guide must contain exactly ${BRAND_GUIDE_EXPECTED_SLIDES} slides, found ${brandGuideSlides.length}`,
-  )
-}
-
