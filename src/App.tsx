@@ -1,5 +1,5 @@
-import BrandGuideDeck from './components/BrandGuideDeck'
+import BrandIdentity from './components/BrandIdentity'
 
 export default function App() {
-  return <BrandGuideDeck />
+  return <BrandIdentity />
 }
